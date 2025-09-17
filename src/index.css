@@ -1,13 +1,55 @@
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/public/fonts/iransans/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/public/fonts/iransans/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+body[dir="rtl"] {
+  font-family: 'Vazirmatn';
+  font-weight: 700;
+  
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', 'sans-serif','Vazirmatn';
+   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1 , h2{
+  font-family: 'montserrat','sans-serif' 'Vazirmatn'; 
+  font-weight: 700; 
+  }
+h3 , h4{
+  font-family: 'montserrat','sans-serif' 'Vazirmatn'; 
+  font-weight: 700; 
+  }
+h5 , h6{
+  font-family: 'montserrat','sans-serif' 'Vazirmatn'; 
+  font-weight: 700; 
+  }
+ p{
+  font-family: 'Vazirmatn';
+  font-weight: 300;
+ }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+
+
