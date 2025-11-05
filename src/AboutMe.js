@@ -19,7 +19,7 @@ const projects = [
       en: "Built with HTML & Javascript"
     },
     image: "/project2.png",
-    link: "https://saeidvahedi.ir/#about"
+    link: "https://saeidvahedi.ir/old"
   }
 ];
 
@@ -32,24 +32,24 @@ export default function Hero({ isFarsi, darkMode }) {
           ? "سلام! من یک توسعه‌دهنده وب هستم"
           : "Hello! I'm a web developer"}
       </h3>
-      <p className="lead">
+      <p className="lead ">
         {isFarsi
           ? "به وب‌سایت شخصی من خوش آمدید. در اینجا می‌توانید پروژه‌ها، مهارت‌ها و راه‌های ارتباطی من را ببینید. من به شما کمک میکنم با قیمت منطقی کسب و کار خود را در فضای اینترنت توسعه دهید. از وب سایت فروشگاهی گرفته تا خدماتی و کسب و کار، من اینجا در کنار شما هستم ."
           : "Welcome to my personal website. Here you can see my projects, skills, and contact info. I help you build a brand for your business at an affordable price."}
       </p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300" style={{ width: "100%", display: "block" }} > <path fill="#406060" fillOpacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" ></path> </svg>
       {/* Projects Section with animation */}
-      <section id="projects" className="container my-5">
+      <section id="projects" className="container-  ">
         <h2>{isFarsi ? "پروژه‌ها" : "Projects"}</h2>
-        <div className="row">
+        <div className="row justify-content-center">
           {projects.map((p, index) => (
-            <div className="col-md-4 mb-3" key={index}>
-              <div className="card h-100 shadow-sm card-animate">
+            <div className="col-11 col-sm-10 col-md-8 col-lg-6 mx-auto my-3" key={index}>
+              <div className="card  shadow card-animate">
                 <img
                   src={p.image}
-                  className="card-img-top"
+                  className="card-img-top img-custom"
                   alt={isFarsi ? p.title.fa : p.title.en}
-                  style={{ objectFit: "cover", height: "200px" }}
+                  style={{ objectFit: "cover", height: "200px", objectPosition: "center" }}
                 />
                 <div className="card-body">
                   <h5 className="card-title">

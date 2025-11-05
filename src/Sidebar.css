@@ -1,98 +1,97 @@
- /* Sidebar.css */
-/* Basic Sidebar Styling */
 
-
-
+/* پایه */
 .sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 260px;
+  width: 250px;
   padding: 1rem;
-
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transform: translateX(-100%);
+  background-color: rgb(40, 60, 60);
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: "Vazirmatn", sans-serif;
+  border-radius: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 1050;
-  font-family: 'IRANSansX';
+  overflow: hidden; /* ❌ دسکتاپ حالت بدون اسکرول */
 }
 
-/* Dark mode */
-.sidebar.dark {
-  background: #333;
-  color: white;
-}
-
-/* RTL version - shows from right */
-.sidebar.rtl {
+/* وقتی از راست باز بشه برای فارسی */
+.sidebar.right {
   right: 0;
   left: auto;
-  transform: translateX(100%);
 }
 
-/* Opened state */
-.sidebar.open {
-  transform: translateX(0);
-}
-
-/* Overlay */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
+/* وقتی از چپ باز بشه برای انگلیسی */
+.sidebar.left {
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.4);
-  z-index: 1049;
+  right: auto;
 }
 
-/* On large screens, show sidebar always */
-@media (min-width: 768px) {
+/* در حالت موبایل (زیر 768px) اسکرول فعال بشه */
+@media (max-width: 767px) {
   .sidebar {
-    position: static;
-    transform: translateX(0);
-    width: 100%;
-    box-shadow: none;
-  }
-  .skill-name {
-    font-size: 0.85rem; /* Smaller text */
-  }
-  .progress {
-    height: 0.8rem; /* Thinner bars */
-  }
-  .progress-bar {
-    font-size: 0.7rem; /* Smaller percentage labels */
-  }
-  
-  .sidebar-overlay {
-    display: none;
-  }
-}
-/* Default styling stays the same */
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .skill-name {
-    font-size: 0.85rem; /* Smaller text */
-  }
-  .progress {
-    height: 0.7rem; /* Thinner bars */
-  }
-  .progress-bar {
-    font-size: 0.6rem; /* Smaller percentage labels */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto; /* ✅ فقط موبایل اسکرول داره */
+    -webkit-overflow-scrolling: touch;
   }
 }
 
-.bg-primary {
-  background-color:rgb(40,60,60) !important;
-}
-.bg-info{
-  background-color:rgb(114, 116, 116) !important;
 
+.profile {
+  margin-bottom: 20px;
 }
 
-.bg-transparent{
-  background-color: rgb(247,243, 242) !important;
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-h5{font-weight: 700;}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.skills-title {
+  font-size: 1.3rem;
+  margin: 15px 0 10px;
+  font-weight: bold;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.skill-bar {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+

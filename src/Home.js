@@ -12,21 +12,23 @@ export default function Home({ isFarsi, darkMode }) {
       <section
         className="d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start  "
         style={{
-          minHeight: "90vh",
+          minHeight: "400px",
+          height:"auto",
+        
         }}
       >
         {/* متن معرفی */}
-        <div className="flex-grow-1" style={{ maxWidth: "600px" }}>
+        <div className="flex-grow-1" style={{ maxWidth: "600px", }}>
           <h1
-            className="fw-bold mb-4"
+            className="fw-bold mb-4 "
             style={{ fontSize: "2.5rem", color: darkMode ? "#fff" : "#111" }}
           >
             {isFarsi
-              ? "سلام، من سعید هستم"
-              : "Hi, I'm Saeed"}
+              ? "سلام، من سعید واحدی فرد هستم"
+              : "Hi, I'm Saeed Vahedi Fard"}
           </h1>
           <p
-            className="mb-4"
+            className="mb-4 "
             style={{
               fontSize: "1.2rem",
               lineHeight: "1.8",
@@ -39,10 +41,11 @@ export default function Home({ isFarsi, darkMode }) {
           </p>
 
           <div>
-            <a href="#projects" className="btn bg-primary text-white btn-lg mx-2">
-              {isFarsi ? "دیدن پروژه‌ها" : "View Projects"}
-            </a>
-            <Link to="/contact" className={`btn btn-lg ${darkMode ? "border-light text-white" : "border-dark"}`}>
+            
+            <Link to="/projects" className={`btn bg-primary text-white btn-lg me-3 ms-3 btn-custom  ${darkMode ? "border-light text-white" : "border-dark"}`}>
+              {isFarsi ?"دیدن پروژه‌ها" : "ٰView projects"}
+            </Link>
+            <Link to="/contact" className={`btn btn-lg  ${darkMode ? "border-light text-white" : "border-dark"}`}>
               {isFarsi ? "تماس با من" : "Contact Me"}
             </Link>
           </div>
@@ -53,7 +56,7 @@ export default function Home({ isFarsi, darkMode }) {
           <img
             src="/illustration-rocket.svg"
             alt="rocket illustration"
-             className="rocket-float"
+             className="rocket-float rocket-img"
             style={{ width: "320px", maxWidth: "90%" }}
           />
         </div>
